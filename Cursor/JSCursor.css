@@ -1,0 +1,32 @@
+:root {
+    /* Defoult cursor color */ --defoult-cursor:#FF00C8; 
+    /* Defoult cursor color border */ --defoult-cursor-border:#FF00C8; 
+    /* Hover cursor color  */ --hover-cursor:#ffffff; 
+    /* Hover cursor color border */ --hover-cursor-border:#ff5fdc; 
+}
+
+.JSCursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--defoult-cursor-border);
+  background: var(--defoult-cursor);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  will-change: transform, width, height, opacity;
+  transition: opacity 0.3s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  opacity: 1;
+}
+.JSCursor.hover {
+    transition: opacity 0.3s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    border-color: var(--hover-cursor);
+    background: var(--hover-cursor-border);
+    box-shadow: 0 0 10px 3px rgba(100, 108, 255, 0.8);
+}
+.JSCursor.click {
+  width: 16px !important;
+  height: 16px !important;
+  transition: width 0.1s ease, height 0.1s ease;
+}
